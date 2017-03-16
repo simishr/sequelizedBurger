@@ -1,0 +1,46 @@
+<div class="container">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 list1">
+				<h2 class="listNames">Burgers List</h2>
+				<ul>
+					{{#each burgers}}
+					{{#unless devoured}}
+					<li>
+						<p> {{this.burger_name}}
+							<form action="/{{this.id}}?_method=PUT" method="POST">
+								<input type="hidden" name="id" value="{{this.id}}">
+								<button class="btn btn-default" type="submit">Devour</button>
+							</form>
+						</p>
+					</li>
+					{{/unless}}
+					{{/each}}
+				</ul>
+			</div>
+			
+			<div class="col-md-4 list2">
+				<h2 class="listNames">Devoured List</h2>
+				<ul>
+					{{#each burgers}}
+					{{#if devoured}}
+					<li>
+						<p>{{this.burger_name}}</p>
+					</li>
+					{{/if}}
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+		<div class="row bottom text-center">
+			<div class="col-md-12">
+				
+				<h2>Add Burgers to devour</h2>
+				<form method="POST" action="/create">
+					<textarea type="text" name="burger"></textarea>
+					<button class="btn btn-default text-center" type="submit">Save Burger</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

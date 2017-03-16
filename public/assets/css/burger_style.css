@@ -1,0 +1,32 @@
+body {
+	background: url("../burgerr.jpeg") repeat;
+	/*color: #f7973d;*/
+	width: 100%;
+	font-family: 'Architects Daughter', cursive;
+	
+}
+
+.jumbotron {
+	background-color: #f7973d;
+
+}
+
+.list1 {
+	background-color: #f7973d;
+	float: left;
+}
+
+.list2 {
+	background-color: #f7973d;
+	float: right;
+}
+
+.listNames {
+	text-align: center;
+}
+
+.bottom {
+	background-color: #f7973d;
+	margin-top: 100px;
+    padding: 20px;
+}
