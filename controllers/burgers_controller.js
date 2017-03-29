@@ -1,10 +1,10 @@
 // DEPENDENCIES..
-var express = require("express");
+// var express = require("express");
 // var burger = require("../models/burger.js");
-var router = express.Router();
+// var router = express.Router();
 
 // Import the model (burger.js) to use its database functions.
-var db = require("../models");
+// var db = require("../models");
 
 // // get route to index
 // router.get("/", function (req, res) {
@@ -31,40 +31,43 @@ var db = require("../models");
 
 // module.exports = router;
 
-router.get("/", function (req, res) {
-	res.redirect("/burgers");
-});
+// get route to index
+// router.get("/", function (req, res) {
+// 	res.redirect("/burgers");
+// });
 
+// get route to get all burger data
+// router.get("/burgers", function (req, res) {
+// 	db.burgers.findAll({})
+// 		.then(function(data) {
+// 			res.render("index", {
+// 				burgers: data
+// 			});
+// 		});
+// });
 
-router.get("/burgers", function (req, res) {
-	db.burgers.findAll({})
-		.then(function(data) {
-			res.render("index", {
-				burgers: data
-			});
-		});
-});
+// post route to create a new burger
+// router.post("/burgers/create", function (req, res) {
+// 	  console.log(req.body);
+// 	db.burgers.create({
+// 		burger_name: req.body.name
+// 		})
+// 			.then(function(data) {
+// 				res.redirect("/burgers");
+// 			});
+// });
 
-router.post("/burgers/create", function (req, res) {
-	  console.log(req.body);
-	db.burgers.create({
-		burger_name: req.body.name
-		})
-			.then(function(data) {
-				res.redirect("/burgers");
-			});
-});
+// put route to update a burger
+// router.put("/burgers/update/:id", function (req, res) {
+// 	db.burgers.update(req.body,
+// 	{
+// 		where: {
+// 			id: req.params.id
+// 		}
+// 	})
+// 		.then (function (data) {
+// 			res.redirect("/burgers");
+// 		});
+// });
 
-router.put("/burgers/update/:id", function (req, res) {
-	db.burgers.update(req.body,
-	{
-		where: {
-			id: req.params.id
-		}
-	})
-		.then (function (data) {
-			res.redirect("/burgers");
-		});
-});
-
-module.exports = router;
+// module.exports = router;
